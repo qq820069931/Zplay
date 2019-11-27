@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- .DTD文件是xml格式文件的约束文件，它约束了该xml文件使用的标签以及标签之间的关系 -->
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+<!-- 根标签 配置 -->
+
+<!-- 注意事项:单独使用mybatis的时候，需要配置环境（数据源和事务管理器）
+但是当mybatis和spring进行整合的时候,交给spring容器来进行管理-->
+<configuration>
+
+<!-- 配置 -->
+<settings>
+  
+	<!-- 默认mybatic3 传入null值,会报错.设置 当传入属性为null时，字段值使用NULL来代替 -->
+	<setting name="jdbcTypeForNull" value="NULL"/>
+</settings>
+
+<!-- 类型别名:自定义别名 -->
+<typeAliases>
+	<package name="com.joinlabs.entity"/>
+
+</typeAliases>
+
+
+<mappers>
+
+</mappers>
+
+
+
+</configuration>
